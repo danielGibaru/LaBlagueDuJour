@@ -1,0 +1,13 @@
+<a href="{{ path('createBlague') }}">Ajouter</a>
+
+<table style="border-collapse: collapse;">
+{% for item in blagues %}
+    <tr style="border: 1px solid black;">
+        <td style="width:400px;">{{ item.texte }}</td>      
+        <td>
+            <a href="{{ path('deleteBlague', { 'id': item.id }) }}">Suprimer</a>
+            <a href="{{ path('updateBlague',{'id': item.id})}}">Editer</a>
+        </td>
+    </tr>
+{% endfor %}
+</table><br><br><br><br><br>
